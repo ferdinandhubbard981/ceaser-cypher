@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "CeaserCypher/1.0.0": {
+        "runtime": {
+          "CeaserCypher.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CeaserCypher/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
