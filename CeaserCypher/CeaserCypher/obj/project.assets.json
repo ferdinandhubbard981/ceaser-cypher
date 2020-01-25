@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\F.Hubbard21\\source\\repos\\CeaserCypher\\CeaserCypher\\CeaserCypher.csproj",
+      "projectUniqueName": "H:\\CeaserCypher\\CeaserCypher\\CeaserCypher.csproj",
       "projectName": "CeaserCypher",
-      "projectPath": "C:\\Users\\F.Hubbard21\\source\\repos\\CeaserCypher\\CeaserCypher\\CeaserCypher.csproj",
+      "projectPath": "H:\\CeaserCypher\\CeaserCypher\\CeaserCypher.csproj",
       "packagesPath": "C:\\Users\\F.Hubbard21\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\F.Hubbard21\\source\\repos\\CeaserCypher\\CeaserCypher\\obj\\",
+      "outputPath": "H:\\CeaserCypher\\CeaserCypher\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\F.Hubbard21\\AppData\\Roaming\\NuGet\\NuGet.Config",

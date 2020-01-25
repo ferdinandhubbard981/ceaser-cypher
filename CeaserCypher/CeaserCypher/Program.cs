@@ -8,14 +8,17 @@ namespace CeaserCypher
         static void Main(string[] args)
         {
             //string message = "tqxxa yk zmyq ue dgbqdf mzp u my m bmddaf. u eqzp qymuxe fa ykeqxr ftmf oazfmuz hqdk zmefk ftuzse";
-            string message = "my name is rupert and i send email to ";
-            string encoded = Encypher(message, 46);
+            Console.WriteLine("enter message to decrypt");
+            string message = Console.ReadLine();
+            Console.WriteLine("enter key:");
+            int key = Convert.ToInt32(Console.ReadLine());
+            //string encoded = Encypher(message, 46);
             //Console.WriteLine(encoded);
             
-            string decoded = Decypher(message, 12);
+            string decoded = Decypher(message, key);
             Console.WriteLine(decoded + "\n\n\n");
             
-            BruteForce(encoded);
+            BruteForce(message);
             
             //Console.WriteLine("Frequency Analysis \n\n\n" + FrequencyAnalysis(encoded));
             Console.ReadLine();
@@ -35,7 +38,7 @@ namespace CeaserCypher
                 }
                 else if (Convert.ToInt32(cypher[x]) - key < 97)
                 {
-                    decyphered += Convert.ToChar(122 - (97 - (Convert.ToInt32(cypher[x]) - key)));
+                    decyphered += Convert.ToChar(123 - (97 - (Convert.ToInt32(cypher[x]) - key)));
 
                 }
                 else
@@ -59,7 +62,7 @@ namespace CeaserCypher
                 }
                 else if (Convert.ToChar(Convert.ToInt32(plainText[x]) + key) > 122)
                 {
-                    encoded += Convert.ToChar(97 + Convert.ToInt32(plainText[x]) + key - 122);
+                    encoded += Convert.ToChar(96 + Convert.ToInt32(plainText[x]) + key - 122);
                 }
                 else
                 {
