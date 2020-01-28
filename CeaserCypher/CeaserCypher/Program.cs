@@ -11,16 +11,17 @@ namespace CeaserCypher
             Console.WriteLine("enter message to decrypt");
             string message = Console.ReadLine();
             Console.WriteLine("enter key:");
-            int key = Convert.ToInt32(Console.ReadLine());
+            message = message.ToLower();
+            //int key = Convert.ToInt32(Console.ReadLine());
             //string encoded = Encypher(message, 46);
             //Console.WriteLine(encoded);
             
-            string decoded = Decypher(message, key);
-            Console.WriteLine(decoded + "\n\n\n");
+            //string decoded = Decypher(message, key);
+            //Console.WriteLine(decoded + "\n\n\n");
             
             BruteForce(message);
             
-            //Console.WriteLine("Frequency Analysis \n\n\n" + FrequencyAnalysis(encoded));
+            Console.WriteLine("Frequency Analysis \n\n\n" + FrequencyAnalysis(message));
             Console.ReadLine();
 
 
@@ -83,7 +84,7 @@ namespace CeaserCypher
 
         static string FrequencyAnalysis(string cypher)
         {
-
+            
             int[] frequency = new int[26];
             foreach (char letter in cypher)
             {
@@ -103,14 +104,15 @@ namespace CeaserCypher
                 }
             }
             int shift = 0;
-            if (Convert.ToInt32(frequency[mostFrequentIndex]) - 101 < 0)
+            if (mostFrequentIndex + 97 - Convert.ToInt32('e') >= 0)
             {
-                shift = Convert.ToInt32(frequency[mostFrequentIndex]) - 101 + 26;
+                shift = mostFrequentIndex + 97 - Convert.ToInt32('e');
             }
             else
             {
-                shift = Convert.ToInt32(frequency[mostFrequentIndex]) - 101;
+                shift = mostFrequentIndex + 97 - Convert.ToInt32('e') + 26;
             }
+            Console.WriteLine(shift);
             return Decypher(cypher, shift);
 
         
